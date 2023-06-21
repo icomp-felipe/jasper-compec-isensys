@@ -89,8 +89,14 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="nis" class="java.lang.String">
-			<fieldDescription><![CDATA[nis]]></fieldDescription>
+		<field name="CPF" class="java.lang.String">
+			<fieldDescription><![CDATA[CPF]]></fieldDescription>
+		</field>
+		<field name="NISOculto" class="java.lang.String">
+			<fieldDescription><![CDATA[NISOculto]]></fieldDescription>
+		</field>
+		<field name="NIS" class="java.lang.String">
+			<fieldDescription><![CDATA[NIS]]></fieldDescription>
 		</field>
 		<field name="nome" class="java.lang.String">
 			<fieldDescription><![CDATA[nome]]></fieldDescription>
@@ -230,7 +236,7 @@
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PAR_LISTA_RETORNOS})]]></dataSourceExpression>
 					</datasetRun>
 					<jr:columnGroup width="555" uuid="77ac5d78-09b3-4909-bfd2-9f8fd8f9b73c">
-						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [5]"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
 						<jr:tableHeader style="Table_CH" height="20" rowSpan="1">
 							<staticText>
 								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="555" height="20" uuid="767a5a15-03d8-4e59-ab90-75918aa354ce"/>
@@ -254,63 +260,83 @@
 								</textField>
 							</jr:detailCell>
 						</jr:column>
-						<jr:column width="100" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5">
+						<jr:column width="85" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5">
 							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
 							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="100" height="20" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe"/>
+									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="85" height="20" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe"/>
 									<text><![CDATA[NIS]]></text>
 								</staticText>
 							</jr:columnHeader>
 							<jr:detailCell style="Table 1_TD" height="20">
 								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="100" height="20" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed"/>
+									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed"/>
 									<textElement verticalAlignment="Middle"/>
-									<textFieldExpression><![CDATA[($F{motivo} == 0) ? String.format("%s.*****.*%s-%s", $F{nis}.substring(0, 3), $F{nis}.substring(9, 10), $F{nis}.substring(10)) : $F{nis}]]></textFieldExpression>
+									<textFieldExpression><![CDATA[($F{motivo} == 0) ? $F{NISOculto} : $F{NIS}]]></textFieldExpression>
 								</textField>
 							</jr:detailCell>
 						</jr:column>
-						<jr:column width="240" uuid="29a57927-ad1e-4a6a-a827-ae1e9c816e18">
+						<jr:column width="85" uuid="1d9f80fe-c74a-4333-8fd8-9560b0eae3ba">
 							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
+							<jr:columnHeader style="Table 1_CH" height="20">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="240" height="20" uuid="68f47809-338d-44e6-82bc-47fde78b10b1"/>
+									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="85" height="20" uuid="8a8c94e0-bd50-4dfb-ae4a-10d37a4959dc"/>
+									<text><![CDATA[CPF]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="Table 1_TD" height="20">
+								<textField>
+									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583"/>
+									<textElement verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{CPF}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="215" uuid="29a57927-ad1e-4a6a-a827-ae1e9c816e18">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								<staticText>
+									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="215" height="20" uuid="68f47809-338d-44e6-82bc-47fde78b10b1"/>
 									<text><![CDATA[Nome]]></text>
 								</staticText>
 							</jr:columnHeader>
 							<jr:detailCell style="Table 1_TD" height="20">
 								<textField textAdjust="StretchHeight">
-									<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="240" height="20" uuid="2818af28-675b-4b84-a17d-4efde40f4d92"/>
+									<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="215" height="20" uuid="2818af28-675b-4b84-a17d-4efde40f4d92"/>
 									<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 								</textField>
 							</jr:detailCell>
 						</jr:column>
-						<jr:column width="90" uuid="191fc934-051a-42eb-92ee-ed837a0c2ed9">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:column width="70" uuid="191fc934-051a-42eb-92ee-ed837a0c2ed9">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
 							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
 								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="90" height="20" uuid="e3cfd20e-10f6-4ac3-9d99-a8a15b1950ba"/>
+									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="70" height="20" uuid="e3cfd20e-10f6-4ac3-9d99-a8a15b1950ba"/>
 									<text><![CDATA[Situação]]></text>
 								</staticText>
 							</jr:columnHeader>
 							<jr:detailCell style="Table 1_TD" height="20">
 								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="90" height="20" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7"/>
+									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="70" height="20" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7"/>
 									<textFieldExpression><![CDATA[($F{situacao} == 'S') ? "Deferido" : "Indeferido"]]></textFieldExpression>
 								</textField>
 							</jr:detailCell>
 						</jr:column>
-						<jr:column width="85" uuid="727ed062-b246-437a-89da-fca6e93fc0f5">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:column width="60" uuid="727ed062-b246-437a-89da-fca6e93fc0f5">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
 							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
 								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="85" height="20" uuid="525c56b7-1dd3-4df7-8cd6-d668be3f47fe"/>
-									<text><![CDATA[Motivo (Cód)]]></text>
+									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="60" height="20" uuid="525c56b7-1dd3-4df7-8cd6-d668be3f47fe"/>
+									<text><![CDATA[Motivo]]></text>
 								</staticText>
 							</jr:columnHeader>
 							<jr:detailCell style="Table 1_TD" height="20">
 								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49"/>
+									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="60" height="20" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49"/>
 									<textFieldExpression><![CDATA[($F{motivo} == 0) ? "" : $F{motivo}]]></textFieldExpression>
 								</textField>
 							</jr:detailCell>
