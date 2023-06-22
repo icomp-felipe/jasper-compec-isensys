@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Similaridades" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76669d55-4a61-41a9-891d-c35a9b93080c">
+	<style name="Títulos" hTextAlign="Center" fontName="DejaVu" fontSize="12" isBold="true"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Cabeçalho Tabela" hTextAlign="Center" fontName="DejaVu" fontSize="10" isBold="true">
+		<box topPadding="3" leftPadding="3" rightPadding="3"/>
+	</style>
+	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+		<box topPadding="0" leftPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3"/>
+	</style>
+	<style name="Texto Dinâmico" fontName="DejaVu" fontSize="10"/>
+	<style name="Rodapé" fontName="DejaVu" fontSize="10"/>
+	<subDataset name="DatasetSimilaridade" uuid="c2d44378-feb4-431b-af44-1affb753b995">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nomeSolicitacao" class="java.lang.String">
+			<fieldDescription><![CDATA[nomeSolicitacao]]></fieldDescription>
+		</field>
+		<field name="nomeRecurso" class="java.lang.String">
+			<fieldDescription><![CDATA[nomeRecurso]]></fieldDescription>
+		</field>
+		<field name="distancia" class="java.lang.Double">
+			<fieldDescription><![CDATA[distancia]]></fieldDescription>
+		</field>
+		<field name="similaridade" class="java.lang.Double">
+			<fieldDescription><![CDATA[similaridade]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="PAR_LOGO" class="java.awt.image.BufferedImage"/>
+	<parameter name="PAR_CABECALHO" class="java.lang.String"/>
+	<parameter name="PAR_LISTA_SIMILARES" class="java.util.ArrayList"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="0" width="555" height="60" uuid="5ece4184-e364-448a-8c6e-f5a8aa9bb7a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Títulos" x="0" y="75" width="555" height="15" uuid="4f5a79db-dc8e-4499-9491-4f5b9f0cdf13">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[Relatório de Similaridade e Distância entre Nomes]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Títulos" x="0" y="90" width="555" height="15" uuid="600f6c43-bccc-4030-a325-56146bb60d8c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{PAR_CABECALHO}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="Texto Dinâmico" x="0" y="115" width="555" height="15" uuid="15cab477-4169-4ff2-b461-9b97363d6fbf">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["Este relatório utiliza o <span style='color: #1E90FF; text-decoration: underline'><a href='https://www.statology.org/jaro-winkler-similarity'>algoritmo de Jaro-Winkler</a></span> para cálculo das similaridades entre os nomes de candidatos solicitantes de isenção de taxa de inscrição. Em resumo, o algoritmo compara os dois nomes e calcula uma porcentagem de semelhança entre eles.<br><b>* Similaridade:</b> quanto mais próximo de 100%, significa que houve pouca alteração entre o nome informado na solicitação de isenção e o nome informado no recurso. Similaridades abaixo de 75% podem significar uma grande mudança no nome!<br><b>* Distância:</b> quanto mais próximo de 0%, significa que houve pouca alteração entre o nome informado na solicitação de isenção e o nome informado no recurso. Distâncias acima de 25% podem significar uma grande mudança no nome!<br><b>Obs.:</b> para fins de cálculo, são envolvidos apenas os candidatos deferidos após a solicitação de recurso."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="10" width="555" height="40" uuid="5ad62c30-d010-4e9f-9271-202e846a9415">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DatasetSimilaridade" uuid="d4b5cda9-c632-4258-92b5-9261e01e6de2">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PAR_LISTA_SIMILARES})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="4f11cc98-891a-4470-ab0f-e9278779a2d4">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<staticText>
+								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="40" height="20" uuid="5b533aa7-39f8-47da-8f0e-a8762f2db756">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<text><![CDATA[Ord.]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="40" height="20" uuid="920b0204-b84d-4985-bb02-7cf4458dd9be"/>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="cca2115b-b362-4ed3-a666-3428374fdf58">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
+							<staticText>
+								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="180" height="20" uuid="849d3623-aa84-4ae3-af31-f18d0bc7fdfd"/>
+								<text><![CDATA[Nome [Solicitação]]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="180" height="20" uuid="150c598c-1a31-482f-b504-03524dbaa4cb"/>
+								<textFieldExpression><![CDATA[$F{nomeSolicitacao}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="aade2e3f-7bf3-44de-9e96-6c7bb0299b4e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="180" height="20" uuid="5240898b-dfb6-4058-b905-0d7791b0e2cb"/>
+								<text><![CDATA[Nome [Recurso]]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="180" height="20" uuid="5105bb28-8ba3-49ba-8412-ce64f1b9171d"/>
+								<textFieldExpression><![CDATA[$F{nomeRecurso}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="c1b03b25-77e3-408b-a873-4503ea09b4a7">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="80" height="20" uuid="3e11f14a-cb81-41dc-a9d2-4023fa3a9387"/>
+								<text><![CDATA[Similaridade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="80" height="20" uuid="a366202b-9db0-4a74-aace-f93429f0c257"/>
+								<textFieldExpression><![CDATA[String.format("%.2f %%", $F{similaridade} * 100d)]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="f2af6108-8213-48fb-8913-7c20b607d217">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
+							<staticText>
+								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="75" height="20" uuid="0536a652-b9ff-4d23-8626-e7358b51b4c7"/>
+								<text><![CDATA[Distância]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="75" height="20" uuid="cc9b062f-d7b7-4698-bd4d-66fdf1d334b5"/>
+								<textFieldExpression><![CDATA[String.format("%.2f %%", $F{distancia} * 100d)]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="Rodapé" x="170" y="5" width="100" height="15" uuid="d719de16-52fc-4857-96cd-2cff49bdc25d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Rodapé" x="270" y="5" width="100" height="15" uuid="ddfa905f-f4a9-4029-b263-fa6c5b5b854f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="Texto Dinâmico" positionType="Float" x="0" y="5" width="555" height="15" uuid="0e8559c0-0d5c-48fa-9b8e-b819f48f7969">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="html">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>Documento extraído em: </b>" + new SimpleDateFormat("dd/MM/yyyy '<b>às</b>' HH:mm:ss",new Locale("pt","BR")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
