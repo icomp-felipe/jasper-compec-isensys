@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Retorno" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a34f9ade-d71a-455b-8bbf-4a120d179700">
+	<style name="Títulos" hTextAlign="Center" fontName="DejaVu" fontSize="12" isBold="true"/>
+	<style name="Rodapé" fontName="DejaVu" fontSize="10"/>
+	<style name="Texto Dinâmico" fontName="DejaVu" fontSize="10"/>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Cabeçalho Tabela" hTextAlign="Center" fontName="DejaVu" fontSize="10" isBold="true">
+		<box topPadding="3" leftPadding="3" rightPadding="3"/>
+	</style>
+	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+		<box topPadding="0" leftPadding="0" rightPadding="0"/>
+	</style>
+	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3"/>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="DatasetDeferidos" uuid="ea78c34a-4c08-496b-b8a3-518bc00bd1ac">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="PAR_LOGO" class="java.awt.image.BufferedImage"/>
+	<parameter name="PAR_CABECALHO" class="java.lang.String"/>
+	<parameter name="PAR_COUNT_INDEF" class="java.lang.Integer"/>
+	<parameter name="PAR_COUNT_REC_INDEF" class="java.lang.Integer"/>
+	<parameter name="PAR_COUNT_LAST_INDEF" class="java.lang.Integer"/>
+	<parameter name="PAR_COUNT_DEF" class="java.lang.Integer"/>
+	<parameter name="PAR_COUNT_REC_DEF" class="java.lang.Integer"/>
+	<parameter name="PAR_COUNT_LAST_DEF" class="java.lang.Integer"/>
+	<parameter name="PAR_TIPO_RESULTADO" class="java.lang.String"/>
+	<parameter name="PAR_LISTA_DEFERIDOS" class="java.util.ArrayList"/>
+	<parameter name="PAR_LISTA_INDEFERIDOS" class="java.util.ArrayList"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="NIS" class="java.lang.String">
+		<fieldDescription><![CDATA[NIS]]></fieldDescription>
+	</field>
+	<field name="CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[CPF]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="0" width="555" height="60" uuid="0a96a318-a00e-40cc-98be-374c1bddd363">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Títulos" x="0" y="80" width="555" height="15" uuid="20fffe4d-a68c-41a6-afee-de83085be916">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{PAR_CABECALHO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Títulos" x="0" y="65" width="555" height="15" uuid="d8cbaed1-55bc-477e-8df3-90ff60f5e961">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["Relatório de Processamento - Resultado"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="650" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement positionType="Float" x="62" y="30" width="430" height="190" uuid="7f6aed88-d744-4bfa-bbe2-e052f4850c3f">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<chartTitle position="Bottom">
+						<titleExpression><![CDATA["Total: " + ($P{PAR_COUNT_DEF} + $P{PAR_COUNT_INDEF})]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA["Deferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_DEF}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA["Indeferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_INDEF}]]></valueExpression>
+					</pieSeries>
+				</pieDataset>
+				<pie3DPlot isShowLabels="true" isCircular="true" labelFormat="{0}: {1} [{2}]" legendLabelFormat="{0}">
+					<plot>
+						<seriesColor seriesOrder="0" color="#7AD09B"/>
+						<seriesColor seriesOrder="1" color="#D685A5"/>
+					</plot>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<textField>
+				<reportElement style="Títulos" positionType="Float" x="0" y="10" width="555" height="15" uuid="4ba95ab4-64d2-4fd6-b533-7a1485099486">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA["* Totais [Resultado " + $P{PAR_TIPO_RESULTADO} + "]"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Títulos" positionType="Float" x="0" y="225" width="555" height="15" uuid="dafe2cbb-8e6c-4030-bc9f-7a0f5dec6330">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA["* Totais [Antes do Recurso]"]]></textFieldExpression>
+			</textField>
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement positionType="Float" x="62" y="245" width="430" height="190" uuid="ba5029e9-f9a5-4902-9cdc-dd42e53c0fa1">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<chartTitle position="Bottom">
+						<titleExpression><![CDATA["Total: " + ($P{PAR_COUNT_LAST_DEF} + $P{PAR_COUNT_LAST_INDEF})]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA["Deferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_LAST_DEF}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA["Indeferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_LAST_INDEF}]]></valueExpression>
+					</pieSeries>
+				</pieDataset>
+				<pie3DPlot isShowLabels="true" isCircular="true" labelFormat="{0}: {1} [{2}]" legendLabelFormat="{0}">
+					<plot>
+						<seriesColor seriesOrder="0" color="#7AD09B"/>
+						<seriesColor seriesOrder="1" color="#D685A5"/>
+					</plot>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<textField>
+				<reportElement style="Títulos" positionType="Float" x="0" y="440" width="555" height="15" uuid="9ffd05f1-ea2a-4e86-8e65-08ec5d7e12b6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA["* Totais [Recurso]"]]></textFieldExpression>
+			</textField>
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement positionType="Float" x="62" y="460" width="430" height="190" uuid="10739d5c-7db3-4838-bae8-2a017d640069">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<chartTitle position="Bottom">
+						<titleExpression><![CDATA["Total: " + ($P{PAR_COUNT_REC_DEF} + $P{PAR_COUNT_REC_INDEF})]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA["Deferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_REC_DEF}]]></valueExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA["Indeferidos"]]></keyExpression>
+						<valueExpression><![CDATA[$P{PAR_COUNT_REC_INDEF}]]></valueExpression>
+					</pieSeries>
+				</pieDataset>
+				<pie3DPlot isShowLabels="true" isCircular="true" labelFormat="{0}: {1} [{2}]" legendLabelFormat="{0}">
+					<plot>
+						<seriesColor seriesOrder="0" color="#7AD09B"/>
+						<seriesColor seriesOrder="1" color="#D685A5"/>
+					</plot>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+		<band height="291">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="40" uuid="31d0b9f2-ed5f-4441-a963-0abeba48997c">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DatasetDeferidos" uuid="39970b25-cbb6-4f0b-b803-31b80b43199c">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource() ]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="d7d258e1-a041-4060-b48b-c1c0a68cf498">
+						<jr:columnHeader style="Table 1_CH" height="20">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="20">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="Rodapé" x="170" y="5" width="100" height="15" uuid="d71eb620-ed8e-4716-8065-ce55fad70c99">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Rodapé" x="270" y="5" width="100" height="15" uuid="6b03e7f2-3e29-4c0f-b56d-c7e3df1470c1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="Texto Dinâmico" positionType="Float" x="0" y="5" width="555" height="15" uuid="4409112a-b0f6-4ef7-9d5e-e140801ff844">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="html">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>Documento extraído em: </b>" + new SimpleDateFormat("dd/MM/yyyy '<b>às</b>' HH:mm:ss",new Locale("pt","BR")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
