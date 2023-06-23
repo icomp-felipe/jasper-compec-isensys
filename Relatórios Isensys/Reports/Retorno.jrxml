@@ -182,17 +182,11 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
-	<pageHeader>
-		<band height="95">
+	<title>
+		<band height="105">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<image>
-				<reportElement x="0" y="0" width="555" height="60" uuid="79b69f43-eda6-4c6b-8bf3-35096641a681">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
-			</image>
 			<textField>
-				<reportElement style="Títulos" x="0" y="65" width="555" height="15" uuid="751e6652-a16f-4cb1-9e94-ffd52fd788cd">
+				<reportElement style="Títulos" x="0" y="70" width="555" height="15" uuid="7e3eb328-fe4e-4598-861a-044bdbb77155">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -200,20 +194,38 @@
 				<textFieldExpression><![CDATA["Relatório de Processamento - Resultado " + $P{PAR_TIPO_RESULTADO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Títulos" x="0" y="80" width="555" height="15" uuid="362b89aa-dac2-4393-86af-8c36fa405b1a">
+				<reportElement style="Títulos" x="0" y="85" width="555" height="15" uuid="b097a699-fc2c-4e9d-b6d5-05faf95e1593">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{PAR_CABECALHO}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="0" y="0" width="555" height="60" uuid="49768249-ba3e-40fc-9154-57f84caf2559">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 1]]></printWhenExpression>
+			<image>
+				<reportElement x="0" y="0" width="555" height="60" uuid="79b69f43-eda6-4c6b-8bf3-35096641a681">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
+			</image>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="440" splitType="Immediate">
+		<band height="215" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<pie3DChart>
 				<chart evaluationTime="Report">
-					<reportElement positionType="Float" x="62" y="30" width="430" height="190" uuid="7f6aed88-d744-4bfa-bbe2-e052f4850c3f">
+					<reportElement positionType="Float" x="62" y="20" width="430" height="190" uuid="7f6aed88-d744-4bfa-bbe2-e052f4850c3f">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<chartTitle position="Bottom">
@@ -241,17 +253,32 @@
 				</pie3DPlot>
 			</pie3DChart>
 			<textField>
-				<reportElement style="Títulos" positionType="Float" x="0" y="10" width="555" height="15" uuid="4ba95ab4-64d2-4fd6-b533-7a1485099486">
+				<reportElement style="Títulos" positionType="Float" x="0" y="0" width="555" height="15" uuid="4ba95ab4-64d2-4fd6-b533-7a1485099486">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left"/>
 				<textFieldExpression><![CDATA["* Totais [Resultado " + $P{PAR_TIPO_RESULTADO} + "]"]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="215" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{PAR_TIPO_RESULTADO}.equals("Definitivo")]]></printWhenExpression>
+			<staticText>
+				<reportElement style="Títulos" positionType="Float" x="0" y="0" width="555" height="15" uuid="9b13e6fb-5d80-440f-b5c3-ae0e686af38f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[* Totais [Antes do Recurso]]]></text>
+			</staticText>
 			<pie3DChart>
 				<chart evaluationTime="Report">
-					<reportElement positionType="Float" x="62" y="245" width="430" height="190" uuid="ba5029e9-f9a5-4902-9cdc-dd42e53c0fa1">
+					<reportElement positionType="Float" x="62" y="20" width="430" height="190" uuid="192ecd12-a171-46b8-9bae-bdee791cdc01">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</reportElement>
 					<chartTitle position="Bottom">
 						<titleExpression><![CDATA["Total: " + ($P{PAR_COUNT_LAST_DEF} + $P{PAR_COUNT_LAST_INDEF})]]></titleExpression>
@@ -277,16 +304,6 @@
 					<itemLabel/>
 				</pie3DPlot>
 			</pie3DChart>
-			<staticText>
-				<reportElement style="Títulos" positionType="Float" x="0" y="225" width="555" height="15" uuid="e3b516d0-83d8-4a81-8014-39e51a3951fa">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left"/>
-				<text><![CDATA[* Totais [Antes do Recurso]]]></text>
-			</staticText>
 		</band>
 		<band height="345" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>

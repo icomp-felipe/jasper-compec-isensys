@@ -89,8 +89,8 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="CPF" class="java.lang.String">
-			<fieldDescription><![CDATA[CPF]]></fieldDescription>
+		<field name="CPFOculto" class="java.lang.String">
+			<fieldDescription><![CDATA[CPFOculto]]></fieldDescription>
 		</field>
 		<field name="NISOculto" class="java.lang.String">
 			<fieldDescription><![CDATA[NISOculto]]></fieldDescription>
@@ -290,7 +290,7 @@
 								<textField>
 									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583"/>
 									<textElement verticalAlignment="Middle"/>
-									<textFieldExpression><![CDATA[$F{CPF}]]></textFieldExpression>
+									<textFieldExpression><![CDATA[$F{CPFOculto}]]></textFieldExpression>
 								</textField>
 							</jr:detailCell>
 						</jr:column>
