@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Similaridades" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76669d55-4a61-41a9-891d-c35a9b93080c">
 	<style name="Títulos" hTextAlign="Center" fontName="DejaVu" fontSize="12" isBold="true"/>
 	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
@@ -76,7 +76,7 @@
 				</reportElement>
 				<text><![CDATA[Relatório de Similaridade e Distância entre Nomes]]></text>
 			</staticText>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement style="Títulos" x="0" y="90" width="555" height="15" uuid="600f6c43-bccc-4030-a325-56146bb60d8c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
