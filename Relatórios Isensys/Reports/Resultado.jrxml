@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Resultado" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78698fe4-ba81-48be-9d34-a2158f025af4">
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Resultado" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78698fe4-ba81-48be-9d34-a2158f025af4">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Retornos"/>
 	<property name="com.jaspersoft.studio.report.description" value="Relatório do Edital de resultado de solicitações de isenção do sistema IsenSys. Atualizado em 11/03/2020."/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
@@ -57,350 +56,284 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Cabeçalho Tabela" hTextAlign="Center" fontName="DejaVu" fontSize="10" isBold="true">
+	<style name="Cabeçalho Tabela" hTextAlign="Center" hImageAlign="Center" fontName="DejaVu" fontSize="10.0" bold="true">
 		<box topPadding="3" leftPadding="3" rightPadding="3"/>
 	</style>
-	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" vImageAlign="Middle" blankWhenNull="true" fontName="DejaVu" fontSize="10.0">
 		<box topPadding="0" leftPadding="0" rightPadding="0"/>
 	</style>
-	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" hImageAlign="Left" vImageAlign="Middle" blankWhenNull="true" fontName="DejaVu" fontSize="10.0">
 		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3"/>
 	</style>
-	<style name="Títulos" hTextAlign="Center" fontName="DejaVu" fontSize="10" isBold="true"/>
-	<style name="Descrição" hTextAlign="Center" fontName="DejaVu" fontSize="10"/>
-	<style name="Rodapé" fontName="DejaVu" fontSize="10"/>
-	<style name="Texto Dinâmico" fontName="DejaVu" fontSize="10"/>
-	<subDataset name="DatasetErros" uuid="e7a23821-fdd6-48ac-a366-86925c92a060">
+	<style name="Títulos" hTextAlign="Center" hImageAlign="Center" fontName="DejaVu" fontSize="10.0" bold="true"/>
+	<style name="Descrição" hTextAlign="Center" hImageAlign="Center" fontName="DejaVu" fontSize="10.0"/>
+	<style name="Rodapé" fontName="DejaVu" fontSize="10.0"/>
+	<style name="Texto Dinâmico" fontName="DejaVu" fontSize="10.0"/>
+	<dataset name="DatasetErros" uuid="e7a23821-fdd6-48ac-a366-86925c92a060">
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-		<queryString>
-			<![CDATA[]]>
-		</queryString>
+		<query language="sql"><![CDATA[]]></query>
 		<field name="ID" class="java.lang.String">
-			<fieldDescription><![CDATA[ID]]></fieldDescription>
+			<description><![CDATA[ID]]></description>
 		</field>
 		<field name="motivo" class="java.lang.String">
-			<fieldDescription><![CDATA[motivo]]></fieldDescription>
+			<description><![CDATA[motivo]]></description>
 		</field>
 		<field name="descricao" class="java.lang.String">
-			<fieldDescription><![CDATA[descricao]]></fieldDescription>
+			<description><![CDATA[descricao]]></description>
 		</field>
-	</subDataset>
-	<subDataset name="DatasetRetornos" uuid="44cce203-d832-4412-84f7-23d5e1ace441">
+	</dataset>
+	<dataset name="DatasetRetornos" uuid="44cce203-d832-4412-84f7-23d5e1ace441">
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Retornos"/>
-		<queryString>
-			<![CDATA[]]>
-		</queryString>
+		<query language="sql"><![CDATA[]]></query>
 		<field name="CPFOculto" class="java.lang.String">
-			<fieldDescription><![CDATA[CPFOculto]]></fieldDescription>
+			<description><![CDATA[CPFOculto]]></description>
 		</field>
 		<field name="NISOculto" class="java.lang.String">
-			<fieldDescription><![CDATA[NISOculto]]></fieldDescription>
+			<description><![CDATA[NISOculto]]></description>
 		</field>
 		<field name="NIS" class="java.lang.String">
-			<fieldDescription><![CDATA[NIS]]></fieldDescription>
+			<description><![CDATA[NIS]]></description>
 		</field>
 		<field name="nome" class="java.lang.String">
-			<fieldDescription><![CDATA[nome]]></fieldDescription>
+			<description><![CDATA[nome]]></description>
 		</field>
 		<field name="situacao" class="java.lang.Character">
-			<fieldDescription><![CDATA[situacao]]></fieldDescription>
+			<description><![CDATA[situacao]]></description>
 		</field>
 		<field name="motivo" class="java.lang.Integer">
-			<fieldDescription><![CDATA[motivo]]></fieldDescription>
+			<description><![CDATA[motivo]]></description>
 		</field>
-	</subDataset>
+	</dataset>
 	<parameter name="PAR_CABECALHO" class="java.lang.String"/>
 	<parameter name="PAR_DATA_PUBLICACAO" class="java.time.LocalDate"/>
 	<parameter name="PAR_LOGO" class="java.awt.image.BufferedImage"/>
 	<parameter name="PAR_LISTA_ERROS" class="java.util.ArrayList"/>
 	<parameter name="PAR_LISTA_RETORNOS" class="java.util.ArrayList"/>
 	<parameter name="PAR_TIPO_RESULTADO" class="java.lang.String"/>
-	<queryString>
-		<![CDATA[]]>
-	</queryString>
+	<query language="sql"><![CDATA[]]></query>
 	<field name="nome" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
+		<description><![CDATA[]]></description>
 	</field>
-	<title>
-		<band height="200" splitType="Stretch">
+	<title height="200" splitType="Stretch">
+		<element kind="image" uuid="e9317160-9cbf-411c-b343-e3a7d8dd53cf" x="0" y="0" width="555" height="60">
+			<expression><![CDATA[$P{PAR_LOGO}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<image>
-				<reportElement x="0" y="0" width="555" height="60" uuid="e9317160-9cbf-411c-b343-e3a7d8dd53cf">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA[$P{PAR_LOGO}]]></imageExpression>
-			</image>
-			<textField>
-				<reportElement style="Títulos" x="0" y="75" width="555" height="15" uuid="b171630e-fbbd-4e47-9237-055003d2e4cc">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA["RESULTADO " + $P{PAR_TIPO_RESULTADO} + " DA SOLICITAÇÃO DE ISENÇÃO DA TAXA DE INSCRIÇÃO"]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="ScaleFont">
-				<reportElement style="Títulos" x="0" y="90" width="555" height="15" uuid="a45a67d2-bef5-406f-8daa-8f4dc839afa1">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$P{PAR_CABECALHO}]]></textFieldExpression>
-			</textField>
-			<componentElement>
-				<reportElement x="0" y="140" width="555" height="60" uuid="2993cf75-802e-4652-96da-07d2669bcfea">
-					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
-					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
-					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
-					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="DatasetErros" uuid="7045e0eb-67d1-4dce-9b42-cfdb15958710">
-						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PAR_LISTA_ERROS})]]></dataSourceExpression>
-					</datasetRun>
-					<jr:columnGroup width="555" uuid="9b829967-880f-43c9-8f61-538826bba287">
-						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
-						<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
-							<staticText>
-								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="555" height="20" uuid="11d717ce-c763-4426-97c0-10f777725831"/>
-								<text><![CDATA[Legenda de Erros de Processamento]]></text>
-							</staticText>
-						</jr:columnHeader>
-						<jr:column width="40" uuid="3337ef4e-6d17-4c02-bb8c-78a7dca31273">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
-							<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement key="" style="Cabeçalho Tabela" x="0" y="0" width="40" height="20" uuid="ca69008b-126c-4210-b4ac-5f92e756f32c"/>
-									<text><![CDATA[Cód.]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="40" height="20" uuid="c6fb541c-240e-4248-b4df-ae7fca7edc4c"/>
-									<textElement textAlignment="Center" verticalAlignment="Middle"/>
-									<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="200" uuid="ff6c77a9-f0be-41a4-b6d7-dfd19cccd7f0">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
-							<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement key="" style="Cabeçalho Tabela" x="0" y="0" width="200" height="20" uuid="63fb6ce6-8fd0-4787-8ca6-2ac9c1f3c0fd"/>
-									<text><![CDATA[Motivo]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table_TD" height="20">
-								<textField textAdjust="StretchHeight">
-									<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="200" height="20" uuid="b7781233-6d9d-4eeb-aa77-8b2f3115c098"/>
-									<textFieldExpression><![CDATA[$F{motivo}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="315" uuid="3cb2b669-7188-496b-ac77-5db054fcc63c">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
-							<jr:columnHeader style="Table_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement key="" style="Cabeçalho Tabela" x="0" y="0" width="315" height="20" uuid="f45a96c0-8efc-449c-a06a-ca38ebba7060"/>
-									<text><![CDATA[Descrição]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table_TD" height="20">
-								<textField textAdjust="StretchHeight">
-									<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="315" height="20" uuid="a356d8da-a170-4179-85dc-82230a87903e"/>
-									<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-					</jr:columnGroup>
-				</jr:table>
-			</componentElement>
-			<staticText>
-				<reportElement style="Descrição" x="0" y="115" width="554" height="15" uuid="8d8521e7-65a9-4ab9-8553-1a77cfe2a4db">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Justified" markup="html"/>
-				<text><![CDATA[O Cadastro Único (CadÚnico) está regulamentado pelo <span style='color: #1E90FF; text-decoration: underline'><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6593.htm">Decreto nº 6.593/2008</a></span> e pelo <span style='color: #1E90FF; text-decoration: underline'><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Decreto/D11016.htm">Decreto nº 11.016/2022</a></span>.]]></text>
-			</staticText>
-		</band>
+		</element>
+		<element kind="textField" uuid="b171630e-fbbd-4e47-9237-055003d2e4cc" x="0" y="75" width="555" height="15" style="Títulos">
+			<expression><![CDATA["RESULTADO " + $P{PAR_TIPO_RESULTADO} + " DA SOLICITAÇÃO DE ISENÇÃO DA TAXA DE INSCRIÇÃO"]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="a45a67d2-bef5-406f-8daa-8f4dc839afa1" x="0" y="90" width="555" height="15" style="Títulos">
+			<expression><![CDATA[$P{PAR_CABECALHO}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="component" uuid="2993cf75-802e-4652-96da-07d2669bcfea" x="0" y="140" width="555" height="60">
+			<component kind="table">
+				<datasetRun uuid="7045e0eb-67d1-4dce-9b42-cfdb15958710" subDataset="DatasetErros">
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PAR_LISTA_ERROS})]]></dataSourceExpression>
+				</datasetRun>
+				<column kind="group" uuid="9b829967-880f-43c9-8f61-538826bba287" width="555">
+					<columnHeader height="20" rowSpan="1" style="Table_CH">
+						<element kind="staticText" uuid="11d717ce-c763-4426-97c0-10f777725831" x="0" y="0" width="555" height="20" style="Cabeçalho Tabela">
+							<text><![CDATA[Legenda de Erros de Processamento]]></text>
+						</element>
+					</columnHeader>
+					<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
+					<column kind="single" uuid="3337ef4e-6d17-4c02-bb8c-78a7dca31273" width="40">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="ca69008b-126c-4210-b4ac-5f92e756f32c" key="" x="0" y="0" width="40" height="20" style="Cabeçalho Tabela">
+								<text><![CDATA[Cód.]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="c6fb541c-240e-4248-b4df-ae7fca7edc4c" x="0" y="0" width="40" height="20" hTextAlign="Center" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+								<expression><![CDATA[$F{ID}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="ff6c77a9-f0be-41a4-b6d7-dfd19cccd7f0" width="200">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="63fb6ce6-8fd0-4787-8ca6-2ac9c1f3c0fd" key="" x="0" y="0" width="200" height="20" style="Cabeçalho Tabela">
+								<text><![CDATA[Motivo]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="b7781233-6d9d-4eeb-aa77-8b2f3115c098" x="0" y="0" width="200" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+								<expression><![CDATA[$F{motivo}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="3cb2b669-7188-496b-ac77-5db054fcc63c" width="315">
+						<columnHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="f45a96c0-8efc-449c-a06a-ca38ebba7060" key="" x="0" y="0" width="315" height="20" style="Cabeçalho Tabela">
+								<text><![CDATA[Descrição]]></text>
+							</element>
+						</columnHeader>
+						<detailCell height="20" style="Table_TD">
+							<element kind="textField" uuid="a356d8da-a170-4179-85dc-82230a87903e" x="0" y="0" width="315" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+								<expression><![CDATA[$F{descricao}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+				</column>
+			</component>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+			<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+			<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="staticText" uuid="8d8521e7-65a9-4ab9-8553-1a77cfe2a4db" x="0" y="115" width="554" height="15" markup="html" hTextAlign="Justified" style="Descrição">
+			<text><![CDATA[O Cadastro Único (CadÚnico) está regulamentado pelo <span style='color: #1E90FF; text-decoration: underline'><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6593.htm">Decreto nº 6.593/2008</a></span> e pelo <span style='color: #1E90FF; text-decoration: underline'><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2022/Decreto/D11016.htm">Decreto nº 11.016/2022</a></span>.]]></text>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</title>
 	<detail>
 		<band height="70" splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<componentElement>
-				<reportElement x="0" y="10" width="555" height="60" uuid="f46bd928-db7a-443d-9bc2-4b700eb39e9b">
-					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
-					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
-					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
-					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="DatasetRetornos" uuid="90ec0cb9-c64b-4ca1-b1ed-fff99894658c">
+			<element kind="component" uuid="f46bd928-db7a-443d-9bc2-4b700eb39e9b" x="0" y="10" width="555" height="60">
+				<component kind="table">
+					<datasetRun uuid="90ec0cb9-c64b-4ca1-b1ed-fff99894658c" subDataset="DatasetRetornos">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PAR_LISTA_RETORNOS})]]></dataSourceExpression>
 					</datasetRun>
-					<jr:columnGroup width="555" uuid="77ac5d78-09b3-4909-bfd2-9f8fd8f9b73c">
-						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
-						<jr:tableHeader style="Table_CH" height="20" rowSpan="1">
-							<staticText>
-								<reportElement style="Cabeçalho Tabela" x="0" y="0" width="555" height="20" uuid="767a5a15-03d8-4e59-ab90-75918aa354ce"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<column kind="group" uuid="77ac5d78-09b3-4909-bfd2-9f8fd8f9b73c" width="555">
+						<tableHeader height="20" rowSpan="1" style="Table_CH">
+							<element kind="staticText" uuid="767a5a15-03d8-4e59-ab90-75918aa354ce" x="0" y="0" width="555" height="20" hTextAlign="Center" vTextAlign="Middle" style="Cabeçalho Tabela">
 								<text><![CDATA[Listagem de Resultados]]></text>
-							</staticText>
-						</jr:tableHeader>
-						<jr:columnHeader style="Table 1_CH" height="0" rowSpan="1"/>
-						<jr:column width="40" uuid="92341258-0dfd-443c-b425-b2e66c6eaf22">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="40" height="20" uuid="8fc52d9b-a80a-4617-a424-216392e7d699"/>
+							</element>
+						</tableHeader>
+						<columnHeader height="0" rowSpan="1" style="Table 1_CH"/>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [6]"/>
+						<column kind="single" uuid="92341258-0dfd-443c-b425-b2e66c6eaf22" width="40">
+							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="8fc52d9b-a80a-4617-a424-216392e7d699" x="0" y="0" width="40" height="20" style="Cabeçalho Tabela">
 									<text><![CDATA[Ord.]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="40" height="20" uuid="3eb7ee20-bf23-4a5e-b5d9-643678a3e0ee"/>
-									<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="85" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="85" height="20" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe"/>
+								</element>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="3eb7ee20-bf23-4a5e-b5d9-643678a3e0ee" x="0" y="0" width="40" height="20" style="Corpo Tabela (Centro)">
+									<expression><![CDATA[$V{REPORT_COUNT}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						</column>
+						<column kind="single" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5" width="85">
+							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
 									<text><![CDATA[NIS]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed"/>
-									<textElement verticalAlignment="Middle"/>
-									<textFieldExpression><![CDATA[$F{NISOculto}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="85" uuid="1d9f80fe-c74a-4333-8fd8-9560b0eae3ba">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
-							<jr:columnHeader style="Table 1_CH" height="20">
+								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="85" height="20" uuid="8a8c94e0-bd50-4dfb-ae4a-10d37a4959dc"/>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed" x="0" y="0" width="85" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+									<expression><![CDATA[$F{NISOculto}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						</column>
+						<column kind="single" uuid="1d9f80fe-c74a-4333-8fd8-9560b0eae3ba" width="85">
+							<columnHeader height="20" style="Table 1_CH">
+								<element kind="staticText" uuid="8a8c94e0-bd50-4dfb-ae4a-10d37a4959dc" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
 									<text><![CDATA[CPF]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="85" height="20" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583"/>
-									<textElement verticalAlignment="Middle"/>
-									<textFieldExpression><![CDATA[$F{CPFOculto}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="215" uuid="29a57927-ad1e-4a6a-a827-ae1e9c816e18">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
+								</element>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583" x="0" y="0" width="85" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+									<expression><![CDATA[$F{CPFOculto}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						</column>
+						<column kind="single" uuid="29a57927-ad1e-4a6a-a827-ae1e9c816e18" width="215">
+							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="68f47809-338d-44e6-82bc-47fde78b10b1" x="0" y="0" width="215" height="20" style="Cabeçalho Tabela">
+									<text><![CDATA[Nome]]></text>
+								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="215" height="20" uuid="68f47809-338d-44e6-82bc-47fde78b10b1"/>
-									<text><![CDATA[Nome]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField textAdjust="StretchHeight">
-									<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="215" height="20" uuid="2818af28-675b-4b84-a17d-4efde40f4d92"/>
-									<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="70" uuid="191fc934-051a-42eb-92ee-ed837a0c2ed9">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="70" height="20" uuid="e3cfd20e-10f6-4ac3-9d99-a8a15b1950ba"/>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="2818af28-675b-4b84-a17d-4efde40f4d92" x="0" y="0" width="215" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+									<expression><![CDATA[$F{nome}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						</column>
+						<column kind="single" uuid="191fc934-051a-42eb-92ee-ed837a0c2ed9" width="70">
+							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="e3cfd20e-10f6-4ac3-9d99-a8a15b1950ba" x="0" y="0" width="70" height="20" style="Cabeçalho Tabela">
 									<text><![CDATA[Situação]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="70" height="20" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7"/>
-									<textFieldExpression><![CDATA[($F{situacao} == 'S') ? "Deferido" : "Indeferido"]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-						<jr:column width="60" uuid="727ed062-b246-437a-89da-fca6e93fc0f5">
-							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
-							<jr:columnHeader style="Table 1_CH" height="20" rowSpan="1">
-								<staticText>
-									<reportElement style="Cabeçalho Tabela" x="0" y="0" width="60" height="20" uuid="525c56b7-1dd3-4df7-8cd6-d668be3f47fe"/>
+								</element>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7" x="0" y="0" width="70" height="20" style="Corpo Tabela (Centro)">
+									<expression><![CDATA[($F{situacao} == 'S') ? "Deferido" : "Indeferido"]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						</column>
+						<column kind="single" uuid="727ed062-b246-437a-89da-fca6e93fc0f5" width="60">
+							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
+								<element kind="staticText" uuid="525c56b7-1dd3-4df7-8cd6-d668be3f47fe" x="0" y="0" width="60" height="20" style="Cabeçalho Tabela">
 									<text><![CDATA[Motivo]]></text>
-								</staticText>
-							</jr:columnHeader>
-							<jr:detailCell style="Table 1_TD" height="20">
-								<textField>
-									<reportElement style="Corpo Tabela (Centro)" x="0" y="0" width="60" height="20" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49"/>
-									<textFieldExpression><![CDATA[($F{situacao} == 'S') ? "" : $F{motivo}]]></textFieldExpression>
-								</textField>
-							</jr:detailCell>
-						</jr:column>
-					</jr:columnGroup>
-				</jr:table>
-			</componentElement>
+								</element>
+							</columnHeader>
+							<detailCell height="20" style="Table 1_TD">
+								<element kind="textField" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49" x="0" y="0" width="60" height="20" style="Corpo Tabela (Centro)">
+									<expression><![CDATA[($F{situacao} == 'S') ? "" : $F{motivo}]]></expression>
+								</element>
+							</detailCell>
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						</column>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 	</detail>
-	<pageFooter>
-		<band height="20" splitType="Stretch">
+	<pageFooter height="20" splitType="Stretch">
+		<element kind="textField" uuid="48f194f5-7304-473e-8b49-603931091027" x="170" y="5" width="100" height="15" hTextAlign="Right" vTextAlign="Bottom" style="Rodapé">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField>
-				<reportElement style="Rodapé" x="170" y="5" width="100" height="15" uuid="48f194f5-7304-473e-8b49-603931091027">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
-				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement style="Rodapé" x="270" y="5" width="100" height="15" uuid="4cd79755-c5d8-44aa-a40c-8c7c3ca75d78">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
-				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-		</band>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="textField" uuid="4cd79755-c5d8-44aa-a40c-8c7c3ca75d78" x="270" y="5" width="100" height="15" evaluationTime="Report" hTextAlign="Left" vTextAlign="Bottom" style="Rodapé">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</pageFooter>
-	<lastPageFooter>
-		<band height="60">
+	<lastPageFooter height="60">
+		<element kind="textField" uuid="5ba104bc-f816-41ce-b0b9-0ace84b23c08" positionType="Float" x="0" y="5" width="555" height="30" markup="html" fontSize="10.0" hTextAlign="Center" style="Texto Dinâmico">
+			<expression><![CDATA["Manaus-AM, " + java.time.format.DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' uuuu", java.util.Locale.of("pt", "BR")).format($P{PAR_DATA_PUBLICACAO}) + "<br>Comissão Permanente de Concursos - COMPEC"]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField>
-				<reportElement style="Texto Dinâmico" positionType="Float" x="0" y="5" width="555" height="30" uuid="5ba104bc-f816-41ce-b0b9-0ace84b23c08">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Center" markup="html">
-					<font size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Manaus-AM, " + java.time.format.DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' uuuu", new java.util.Locale("pt", "BR")).format($P{PAR_DATA_PUBLICACAO}) + "<br>Comissão Permanente de Concursos - COMPEC"]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Rodapé" x="170" y="45" width="100" height="15" uuid="c90f695f-95eb-4901-ac84-2172328974ba">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
-				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement style="Rodapé" x="270" y="45" width="100" height="15" uuid="1bfacffc-077e-4c45-a8e2-b416f28bafed">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
-				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-		</band>
+		</element>
+		<element kind="textField" uuid="c90f695f-95eb-4901-ac84-2172328974ba" x="170" y="45" width="100" height="15" hTextAlign="Right" vTextAlign="Bottom" style="Rodapé">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="textField" uuid="1bfacffc-077e-4c45-a8e2-b416f28bafed" x="270" y="45" width="100" height="15" evaluationTime="Report" hTextAlign="Left" vTextAlign="Bottom" style="Rodapé">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</lastPageFooter>
 </jasperReport>

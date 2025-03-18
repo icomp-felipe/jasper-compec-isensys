@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Retorno" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a34f9ade-d71a-455b-8bbf-4a120d179700">
-	<style name="Títulos" hTextAlign="Center" fontName="DejaVu" fontSize="12" isBold="true"/>
+	<style name="Títulos" hAlign="Center" fontName="DejaVu" fontSize="12" isBold="true"/>
 	<style name="Rodapé" fontName="DejaVu" fontSize="10"/>
 	<style name="Texto Dinâmico" fontName="DejaVu" fontSize="10"/>
 	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
@@ -22,13 +21,13 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Cabeçalho Tabela" hTextAlign="Center" fontName="DejaVu" fontSize="10" isBold="true">
+	<style name="Cabeçalho Tabela" hAlign="Center" fontName="DejaVu" fontSize="10" isBold="true">
 		<box topPadding="3" leftPadding="3" rightPadding="3"/>
 	</style>
-	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+	<style name="Corpo Tabela (Centro)" hAlign="Center" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
 		<box topPadding="0" leftPadding="0" rightPadding="0"/>
 	</style>
-	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
+	<style name="Corpo Tabela (Esquerda)" hAlign="Left" vAlign="Middle" isBlankWhenNull="true" fontName="DejaVu" fontSize="10">
 		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="3"/>
 	</style>
 	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
@@ -193,7 +192,7 @@
 				</reportElement>
 				<textFieldExpression><![CDATA["Relatório de Processamento - Resultado " + $P{PAR_TIPO_RESULTADO}]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="ScaleFont">
+			<textField>
 				<reportElement style="Títulos" x="0" y="85" width="555" height="15" uuid="b097a699-fc2c-4e9d-b6d5-05faf95e1593">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -350,7 +349,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 1_TD" height="20">
-							<textField textAdjust="StretchHeight">
+							<textField isStretchWithOverflow="true">
 								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="345" height="20" uuid="8b00f2f0-1b8e-4f5f-8e5d-de33ca4918ce"/>
 								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 							</textField>
@@ -453,7 +452,7 @@
 						</jr:columnHeader>
 						<jr:detailCell style="Table 2_TD" height="20">
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<textField textAdjust="StretchHeight">
+							<textField isStretchWithOverflow="true">
 								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="335" height="20" uuid="edfcc1e4-0d95-4d17-9a55-95d540ba0d8c"/>
 								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 							</textField>
@@ -595,7 +594,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="20">
-							<textField textAdjust="StretchHeight">
+							<textField isStretchWithOverflow="true">
 								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="110" height="20" uuid="a085c398-18ff-4cbd-878b-631244587095"/>
 								<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
 							</textField>
@@ -610,7 +609,7 @@
 							</staticText>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="20">
-							<textField textAdjust="StretchHeight">
+							<textField isStretchWithOverflow="true">
 								<reportElement style="Corpo Tabela (Esquerda)" x="0" y="0" width="405" height="20" uuid="4d22e2e9-cc67-4fdc-8c48-cf9a4808d757"/>
 								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 							</textField>
