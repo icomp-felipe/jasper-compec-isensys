@@ -1,7 +1,7 @@
-<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
 <jasperReport name="Resultado" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78698fe4-ba81-48be-9d34-a2158f025af4">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Retornos"/>
-	<property name="com.jaspersoft.studio.report.description" value="Relatório do Edital de resultado de solicitações de isenção do sistema IsenSys. Atualizado em 11/03/2020."/>
+	<property name="com.jaspersoft.studio.report.description" value="Relatório do Edital de resultado de solicitações de isenção do sistema IsenSys. Atualizado em 18/03/2025."/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
@@ -56,10 +56,10 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Cabeçalho Tabela" hTextAlign="Center" hImageAlign="Center" fontName="DejaVu" fontSize="10.0" bold="true">
-		<box topPadding="3" leftPadding="3" rightPadding="3"/>
+	<style name="Cabeçalho Tabela" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" vImageAlign="Middle" fontName="DejaVu" fontSize="10.0" bold="true">
+		<box topPadding="0" leftPadding="0" rightPadding="0"/>
 	</style>
-	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" vImageAlign="Middle" blankWhenNull="true" fontName="DejaVu" fontSize="10.0">
+	<style name="Corpo Tabela (Centro)" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" blankWhenNull="true" fontName="DejaVu" fontSize="10.0">
 		<box topPadding="0" leftPadding="0" rightPadding="0"/>
 	</style>
 	<style name="Corpo Tabela (Esquerda)" hTextAlign="Left" vTextAlign="Middle" hImageAlign="Left" vImageAlign="Middle" blankWhenNull="true" fontName="DejaVu" fontSize="10.0">
@@ -123,7 +123,7 @@
 			<expression><![CDATA["RESULTADO " + $P{PAR_TIPO_RESULTADO} + " DA SOLICITAÇÃO DE ISENÇÃO DA TAXA DE INSCRIÇÃO"]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="a45a67d2-bef5-406f-8daa-8f4dc839afa1" x="0" y="90" width="555" height="15" style="Títulos">
+		<element kind="textField" uuid="a45a67d2-bef5-406f-8daa-8f4dc839afa1" x="0" y="90" width="555" height="15" textAdjust="ScaleFont" style="Títulos">
 			<expression><![CDATA[$P{PAR_CABECALHO}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -136,7 +136,7 @@
 				<column kind="group" uuid="9b829967-880f-43c9-8f61-538826bba287" width="555">
 					<columnHeader height="20" rowSpan="1" style="Table_CH">
 						<element kind="staticText" uuid="11d717ce-c763-4426-97c0-10f777725831" x="0" y="0" width="555" height="20" style="Cabeçalho Tabela">
-							<text><![CDATA[Legenda de Erros de Processamento]]></text>
+							<text><![CDATA[Situações de Processamento]]></text>
 						</element>
 					</columnHeader>
 					<property name="com.jaspersoft.studio.components.table.model.column.name" value="Columns [3]"/>
@@ -147,9 +147,10 @@
 							</element>
 						</columnHeader>
 						<detailCell height="20" style="Table_TD">
-							<element kind="textField" uuid="c6fb541c-240e-4248-b4df-ae7fca7edc4c" x="0" y="0" width="40" height="20" hTextAlign="Center" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+							<element kind="textField" uuid="c6fb541c-240e-4248-b4df-ae7fca7edc4c" stretchType="ContainerHeight" x="0" y="0" width="40" height="20" textAdjust="ScaleFont" style="Corpo Tabela (Centro)">
 								<expression><![CDATA[$F{ID}]]></expression>
 							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
 					</column>
@@ -160,7 +161,7 @@
 							</element>
 						</columnHeader>
 						<detailCell height="20" style="Table_TD">
-							<element kind="textField" uuid="b7781233-6d9d-4eeb-aa77-8b2f3115c098" x="0" y="0" width="200" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+							<element kind="textField" uuid="b7781233-6d9d-4eeb-aa77-8b2f3115c098" stretchType="ContainerHeight" x="0" y="0" width="200" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
 								<expression><![CDATA[$F{motivo}]]></expression>
 							</element>
 						</detailCell>
@@ -173,7 +174,7 @@
 							</element>
 						</columnHeader>
 						<detailCell height="20" style="Table_TD">
-							<element kind="textField" uuid="a356d8da-a170-4179-85dc-82230a87903e" x="0" y="0" width="315" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+							<element kind="textField" uuid="a356d8da-a170-4179-85dc-82230a87903e" stretchType="ContainerHeight" x="0" y="0" width="315" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
 								<expression><![CDATA[$F{descricao}]]></expression>
 							</element>
 						</detailCell>
@@ -217,7 +218,7 @@
 								</element>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="3eb7ee20-bf23-4a5e-b5d9-643678a3e0ee" x="0" y="0" width="40" height="20" style="Corpo Tabela (Centro)">
+								<element kind="textField" uuid="3eb7ee20-bf23-4a5e-b5d9-643678a3e0ee" stretchType="ContainerHeight" x="0" y="0" width="40" height="20" style="Corpo Tabela (Centro)">
 									<expression><![CDATA[$V{REPORT_COUNT}]]></expression>
 								</element>
 							</detailCell>
@@ -231,7 +232,7 @@
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed" x="0" y="0" width="85" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+								<element kind="textField" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed" stretchType="ContainerHeight" x="0" y="0" width="85" height="20" style="Corpo Tabela (Centro)">
 									<expression><![CDATA[$F{NISOculto}]]></expression>
 								</element>
 							</detailCell>
@@ -245,7 +246,7 @@
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583" x="0" y="0" width="85" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
+								<element kind="textField" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583" stretchType="ContainerHeight" x="0" y="0" width="85" height="20" style="Corpo Tabela (Centro)">
 									<expression><![CDATA[$F{CPFOculto}]]></expression>
 								</element>
 							</detailCell>
@@ -260,7 +261,7 @@
 								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="2818af28-675b-4b84-a17d-4efde40f4d92" x="0" y="0" width="215" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
+								<element kind="textField" uuid="2818af28-675b-4b84-a17d-4efde40f4d92" stretchType="ContainerHeight" x="0" y="0" width="215" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
 									<expression><![CDATA[$F{nome}]]></expression>
 								</element>
 							</detailCell>
@@ -273,7 +274,7 @@
 								</element>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7" x="0" y="0" width="70" height="20" style="Corpo Tabela (Centro)">
+								<element kind="textField" uuid="3ccf24b1-ca57-469d-bbc6-716bb506f4a7" stretchType="ContainerHeight" x="0" y="0" width="70" height="20" style="Corpo Tabela (Centro)">
 									<expression><![CDATA[($F{situacao} == 'S') ? "Deferido" : "Indeferido"]]></expression>
 								</element>
 							</detailCell>
@@ -286,7 +287,7 @@
 								</element>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
-								<element kind="textField" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49" x="0" y="0" width="60" height="20" style="Corpo Tabela (Centro)">
+								<element kind="textField" uuid="51c6609f-fae8-48a2-bbbe-b8cd2080cc49" stretchType="ContainerHeight" x="0" y="0" width="60" height="20" style="Corpo Tabela (Centro)">
 									<expression><![CDATA[($F{situacao} == 'S') ? "" : $F{motivo}]]></expression>
 								</element>
 							</detailCell>
