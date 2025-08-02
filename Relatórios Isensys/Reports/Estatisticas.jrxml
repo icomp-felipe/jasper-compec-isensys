@@ -1,5 +1,9 @@
-<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<!-- 2025-08-02T15:41:51 -->
 <jasperReport name="Retorno" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a34f9ade-d71a-455b-8bbf-4a120d179700">
+	<import>java.time.format.DateTimeFormatter</import>
+	<import>java.time.LocalDate</import>
+	<import>java.time.LocalDateTime</import>
 	<style name="Cabeçalho Tabela" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" fontName="DejaVu" fontSize="10.0" bold="true">
 		<box topPadding="0" leftPadding="0" rightPadding="0"/>
 	</style>
@@ -71,8 +75,8 @@
 		<field name="nome" class="java.lang.String">
 			<description><![CDATA[nome]]></description>
 		</field>
-		<field name="NIS" class="java.lang.String">
-			<description><![CDATA[NIS]]></description>
+		<field name="dataNascimento" class="java.time.LocalDate">
+			<description><![CDATA[dataNascimento]]></description>
 		</field>
 		<field name="CPF" class="java.lang.String">
 			<description><![CDATA[CPF]]></description>
@@ -83,8 +87,8 @@
 		<field name="nome" class="java.lang.String">
 			<description><![CDATA[nome]]></description>
 		</field>
-		<field name="CPF" class="java.lang.String">
-			<description><![CDATA[CPF]]></description>
+		<field name="dataNascimento" class="java.time.LocalDate">
+			<description><![CDATA[dataNascimento]]></description>
 		</field>
 		<field name="NIS" class="java.lang.String">
 			<description><![CDATA[NIS]]></description>
@@ -113,8 +117,8 @@
 	<field name="nome" class="java.lang.String">
 		<description><![CDATA[nome]]></description>
 	</field>
-	<field name="NIS" class="java.lang.String">
-		<description><![CDATA[NIS]]></description>
+	<field name="dataNascimento" class="java.time.LocalDate">
+		<description><![CDATA[dataNascimento]]></description>
 	</field>
 	<field name="CPF" class="java.lang.String">
 		<description><![CDATA[CPF]]></description>
@@ -264,13 +268,13 @@
 					<column kind="single" uuid="67fe2915-1cd2-413c-8cbd-f104a6556631" width="85">
 						<columnHeader height="20" rowSpan="1" style="Table 1_CH">
 							<element kind="staticText" uuid="b882c58b-e594-4894-ac55-14343dc826e3" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
-								<text><![CDATA[NIS]]></text>
+								<text><![CDATA[Nascimento]]></text>
 							</element>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
 							<element kind="textField" uuid="2846f130-2c30-4de5-98a3-d699760aa1d2" x="0" y="0" width="85" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
-								<expression><![CDATA[$F{NIS}]]></expression>
+								<expression><![CDATA[$F{dataNascimento}.format(DateTimeFormatter.ofPattern("dd/MM/uuuu"))]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
@@ -342,7 +346,7 @@
 						</columnHeader>
 						<detailCell height="20" style="Table 2_TD">
 							<element kind="textField" uuid="6f3f266f-9f73-435a-a2a5-7017d6d3f653" x="0" y="0" width="90" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
-								<expression><![CDATA[$F{CPF}]]></expression>
+								<expression><![CDATA[$F{dataNascimento}]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
@@ -350,13 +354,13 @@
 					<column kind="single" uuid="acb015ae-cb83-4489-a2dd-a7ead6e0893d" width="90">
 						<columnHeader height="20" rowSpan="1" style="Table 2_CH">
 							<element kind="staticText" uuid="7005aaed-3f06-4b5f-8267-15458ffc29a2" x="0" y="0" width="90" height="20" style="Cabeçalho Tabela">
-								<text><![CDATA[NIS]]></text>
+								<text><![CDATA[Nascimento]]></text>
 							</element>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 2_TD">
 							<element kind="textField" uuid="a54b8fbf-be29-41de-8ff7-ff5c8ffcf2b1" x="0" y="0" width="90" height="20" vTextAlign="Middle" style="Corpo Tabela (Centro)">
-								<expression><![CDATA[$F{NIS}]]></expression>
+								<expression><![CDATA[$F{dataNascimento}.format(DateTimeFormatter.ofPattern("dd/MM/uuuu"))]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
@@ -485,7 +489,7 @@
 	</pageFooter>
 	<lastPageFooter height="35">
 		<element kind="textField" uuid="ca05c1e7-4da3-4926-b2da-15694f449be1" positionType="Float" x="0" y="5" width="555" height="15" markup="html" fontSize="10.0" hTextAlign="Center" style="Texto Dinâmico">
-			<expression><![CDATA["<b>Documento extraído em: </b>" + new SimpleDateFormat("dd/MM/yyyy '<b>às</b>' HH:mm:ss",new Locale("pt","BR")).format(new java.util.Date())]]></expression>
+			<expression><![CDATA["<b>Documento extraído em: </b>" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy '<b>às</b>' HH:mm:ss"))]]></expression>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>

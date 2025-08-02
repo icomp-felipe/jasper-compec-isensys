@@ -1,7 +1,11 @@
-<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<!-- 2025-08-02T15:42:49 -->
 <jasperReport name="Resultado" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78698fe4-ba81-48be-9d34-a2158f025af4">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Retornos"/>
 	<property name="com.jaspersoft.studio.report.description" value="Relatório do Edital de resultado de solicitações de isenção do sistema IsenSys. Atualizado em 18/03/2025."/>
+	<import>java.time.format.DateTimeFormatter</import>
+	<import>java.time.LocalDate</import>
+	<import>java.time.LocalDateTime</import>
 	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
@@ -70,11 +74,8 @@
 		<field name="CPFOculto" class="java.lang.String">
 			<description><![CDATA[CPFOculto]]></description>
 		</field>
-		<field name="NISOculto" class="java.lang.String">
-			<description><![CDATA[NISOculto]]></description>
-		</field>
-		<field name="NIS" class="java.lang.String">
-			<description><![CDATA[NIS]]></description>
+		<field name="dataNascimento" class="java.time.LocalDate">
+			<description><![CDATA[dataNascimento]]></description>
 		</field>
 		<field name="nome" class="java.lang.String">
 			<description><![CDATA[nome]]></description>
@@ -209,13 +210,13 @@
 						<column kind="single" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5" width="85">
 							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
 								<element kind="staticText" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
-									<text><![CDATA[NIS]]></text>
+									<text><![CDATA[Nascimento]]></text>
 								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
 								<element kind="textField" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed" stretchType="ContainerHeight" x="0" y="0" width="85" height="20" style="Corpo Tabela (Centro)">
-									<expression><![CDATA[$F{NISOculto}]]></expression>
+									<expression><![CDATA[$F{dataNascimento}.format(DateTimeFormatter.ofPattern("dd/MM/uuuu"))]]></expression>
 								</element>
 							</detailCell>
 							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
