@@ -1,5 +1,4 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
-<!-- 2025-08-02T15:42:49 -->
 <jasperReport name="Resultado" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78698fe4-ba81-48be-9d34-a2158f025af4">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Retornos"/>
 	<property name="com.jaspersoft.studio.report.description" value="Relatório do Edital de resultado de solicitações de isenção do sistema IsenSys. Atualizado em 18/03/2025."/>
@@ -74,8 +73,8 @@
 		<field name="CPFOculto" class="java.lang.String">
 			<description><![CDATA[CPFOculto]]></description>
 		</field>
-		<field name="dataNascimento" class="java.time.LocalDate">
-			<description><![CDATA[dataNascimento]]></description>
+		<field name="nascimentoOculto" class="java.lang.String">
+			<description><![CDATA[nascimentoOculto]]></description>
 		</field>
 		<field name="nome" class="java.lang.String">
 			<description><![CDATA[nome]]></description>
@@ -210,13 +209,13 @@
 						<column kind="single" uuid="352b4e8a-9541-4217-a618-93abcd6f21b5" width="85">
 							<columnHeader height="20" rowSpan="1" style="Table 1_CH">
 								<element kind="staticText" uuid="f36a6fae-7cc8-49fc-8445-0f4b86970afe" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
-									<text><![CDATA[Nascimento]]></text>
+									<text><![CDATA[CPF]]></text>
 								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
 								<element kind="textField" uuid="dfac6169-bc8e-4b06-baf8-0a2174c43eed" stretchType="ContainerHeight" x="0" y="0" width="85" height="20" style="Corpo Tabela (Centro)">
-									<expression><![CDATA[$F{dataNascimento}.format(DateTimeFormatter.ofPattern("dd/MM/uuuu"))]]></expression>
+									<expression><![CDATA[$F{CPFOculto}]]></expression>
 								</element>
 							</detailCell>
 							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
@@ -224,13 +223,13 @@
 						<column kind="single" uuid="1d9f80fe-c74a-4333-8fd8-9560b0eae3ba" width="85">
 							<columnHeader height="20" style="Table 1_CH">
 								<element kind="staticText" uuid="8a8c94e0-bd50-4dfb-ae4a-10d37a4959dc" x="0" y="0" width="85" height="20" style="Cabeçalho Tabela">
-									<text><![CDATA[CPF]]></text>
+									<text><![CDATA[Nascimento]]></text>
 								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</columnHeader>
 							<detailCell height="20" style="Table 1_TD">
 								<element kind="textField" uuid="b3511ac4-8171-4a4c-ac3e-fe3725e31583" stretchType="ContainerHeight" x="0" y="0" width="85" height="20" style="Corpo Tabela (Centro)">
-									<expression><![CDATA[$F{CPFOculto}]]></expression>
+									<expression><![CDATA[$F{nascimentoOculto}]]></expression>
 								</element>
 							</detailCell>
 							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
@@ -300,20 +299,20 @@
 		</element>
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</pageFooter>
-	<lastPageFooter height="60">
-		<element kind="textField" uuid="5ba104bc-f816-41ce-b0b9-0ace84b23c08" positionType="Float" x="0" y="5" width="555" height="30" markup="html" fontSize="10.0" hTextAlign="Center" style="Texto Dinâmico">
-			<expression><![CDATA["Manaus-AM, " + java.time.format.DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' uuuu", java.util.Locale.of("pt", "BR")).format($P{PAR_DATA_PUBLICACAO}) + "<br>Comissão Permanente de Concursos - COMPEC"]]></expression>
+	<lastPageFooter height="40">
+		<element kind="textField" uuid="5ba104bc-f816-41ce-b0b9-0ace84b23c08" positionType="Float" x="0" y="5" width="555" height="15" markup="html" fontSize="10.0" hTextAlign="Center" style="Texto Dinâmico">
+			<expression><![CDATA["Manaus-AM, " + DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' uuuu", Locale.of("pt", "BR")).format($P{PAR_DATA_PUBLICACAO}) + "<br>Comissão Permanente de Concursos - COMPEC"]]></expression>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</element>
-		<element kind="textField" uuid="c90f695f-95eb-4901-ac84-2172328974ba" x="170" y="45" width="100" height="15" hTextAlign="Right" vTextAlign="Bottom" style="Rodapé">
+		<element kind="textField" uuid="c90f695f-95eb-4901-ac84-2172328974ba" x="170" y="25" width="100" height="15" hTextAlign="Right" vTextAlign="Bottom" style="Rodapé">
 			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 		</element>
-		<element kind="textField" uuid="1bfacffc-077e-4c45-a8e2-b416f28bafed" x="270" y="45" width="100" height="15" evaluationTime="Report" hTextAlign="Left" vTextAlign="Bottom" style="Rodapé">
+		<element kind="textField" uuid="1bfacffc-077e-4c45-a8e2-b416f28bafed" x="270" y="25" width="100" height="15" evaluationTime="Report" hTextAlign="Left" vTextAlign="Bottom" style="Rodapé">
 			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>

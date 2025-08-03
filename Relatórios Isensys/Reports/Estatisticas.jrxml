@@ -1,5 +1,4 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
-<!-- 2025-08-02T15:41:51 -->
 <jasperReport name="Retorno" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a34f9ade-d71a-455b-8bbf-4a120d179700">
 	<import>java.time.format.DateTimeFormatter</import>
 	<import>java.time.LocalDate</import>
@@ -99,8 +98,8 @@
 		<field name="tipo" class="java.lang.String">
 			<description><![CDATA[tipo]]></description>
 		</field>
-		<field name="nome" class="java.lang.String">
-			<description><![CDATA[nome]]></description>
+		<field name="arquivo" class="java.io.File">
+			<description><![CDATA[arquivo]]></description>
 		</field>
 	</dataset>
 	<parameter name="PAR_LOGO" class="java.awt.image.BufferedImage"/>
@@ -456,7 +455,7 @@
 						</columnHeader>
 						<detailCell height="20" style="Table 3_TD">
 							<element kind="textField" uuid="4d22e2e9-cc67-4fdc-8c48-cf9a4808d757" x="0" y="0" width="405" height="20" textAdjust="StretchHeight" style="Corpo Tabela (Esquerda)">
-								<expression><![CDATA[$F{nome}]]></expression>
+								<expression><![CDATA[$F{arquivo}.getName()]]></expression>
 							</element>
 						</detailCell>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
